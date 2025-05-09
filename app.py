@@ -25,3 +25,7 @@ def reply():
 <Response>
     <Message>{reply_text}</Message>
 </Response>""", 200, {'Content-Type': 'application/xml'}
+
+# ⬇️ זוהי השורה הקריטית שגרמה לשגיאה
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
